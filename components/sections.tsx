@@ -182,7 +182,10 @@ export function ReviewsSection() {
         {reviews.length ? (
           <div className="staff-list">
             {reviews.map(({ author, quote, sourceUrl }) => (
-              <figure key={sourceUrl}><blockquote>{quote}</blockquote><figcaption><a className="text-link" href={sourceUrl}>{author} · View source</a></figcaption></figure>
+              <figure key={sourceUrl}>
+                <blockquote cite={sourceUrl}>{quote}</blockquote>
+                <figcaption><a className="text-link" href={sourceUrl}>{author} · Google Maps profile</a></figcaption>
+              </figure>
             ))}
           </div>
         ) : (

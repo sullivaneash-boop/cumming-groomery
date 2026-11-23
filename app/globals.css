@@ -142,7 +142,7 @@ figcaption { color: var(--muted); font-size: .875rem; margin-top: .52rem; }
 .review-section { background: var(--cream); }
 .staff-list { display: grid; gap: 1rem; }
 .staff-list figure, .staff-list article { border-top: 1px solid var(--line); padding-top: 1rem; }
-.staff-list blockquote { font-size: 1.15rem; }
+.review-section blockquote { font-size: 1.15rem; white-space: pre-line; }
 .steps { list-style-position: inside; display: grid; gap: .95rem; margin-block: 1.7rem; }
 .steps li { list-style: none; padding: 1.25rem 1.1rem; border-top: 1px solid #a3ada0; background: rgb(255 255 255 / .2); }
 .steps li > svg { margin-bottom: .8rem; color: var(--clay-hover); }

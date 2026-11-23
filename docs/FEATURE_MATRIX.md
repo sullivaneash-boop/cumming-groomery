@@ -10,7 +10,7 @@
 | Announcements and new-client information | Optional settings | Provide approved copy |
 | Digital gift cards | Optional outbound setting | Supply owner-approved provider link |
 | Staff | Editable profile slots | Supply approved names, biographies and portraits |
-| Reviews | Clearly marked placeholder with data slots | Verify source and permission for each quote |
+| Reviews | Three user-supplied quotes with Google Maps contributor links | Confirm permission for production use |
 | Email form | Possible future integration | Choose delivery and privacy requirements |
 | CMS | Possible future integration | Decide who edits and how often |
 | Metadata and LocalBusiness data | Operational, noindex for demo | Set domain and reviewed metadata for launch |

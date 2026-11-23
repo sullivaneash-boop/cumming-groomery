@@ -18,13 +18,13 @@ Checked November 23, 2026. Statuses apply at the time of review.
 ## PROVISIONAL
 
 - The original Pawfinity URL still appears in indexed results with current and older names and email addresses. Direct retrieval returned 404 for the old slug with zero, one or two trailing slashes. The new slug returns 200 and matches the business identity. The current provider page is the reference for contact information. [Legacy listing address](https://crm.pawfinity.com/couture-cuts-pet-salon//)
-- Exact-name, phone and address searches for Google Maps, review profiles, Facebook and Instagram did not establish a confirmed official profile URL or attributable review for the demo. The user supplied the Facebook photo files and artwork for use in the concept. Confirm the owner-controlled profiles and photo permissions before public use.
+- Initial searches did not establish a confirmed official Google Maps or social profile URL. The user later supplied three Google Maps reviews for the demo, with links to the reviewers' contributor profiles. The user also supplied the Facebook photo files and artwork. Confirm the owner-controlled profiles and permissions for production use.
 - The provided backstory about the previous website remains unverified. The demo leaves it out.
 - Booking availability, eligibility, approval timing and the logged-in workflow require owner confirmation. The public application is an intake entry point. A customer should call to confirm an appointment.
 
 ## DEMO CONTENT
 
-Full grooming, bath and brush, nail care and add-ons illustrate how a service menu might read. The FAQ explains common questions and identifies pricing factors as general guidance. No price, policy, minimum appointment duration, credentials, rating or testimonial is asserted. Common friction points below are design inferences from reference sites and the current provider flow.
+Full grooming, bath and brush, nail care and add-ons illustrate how a service menu might read. The FAQ explains common questions and identifies pricing factors as general guidance. No price, policy, minimum appointment duration, credentials or rating is asserted. Common friction points below are design inferences from reference sites and the current provider flow.
 
 | Decision | Evidence and inference |
 | --- | --- |
