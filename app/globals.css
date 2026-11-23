@@ -114,10 +114,10 @@ h3 { font-size: clamp(1.36rem, 2vw, 1.8rem); }
 .hero-photo img { object-fit: cover; object-position: 50% 60%; }
 .photo-caption { position: absolute; right: .65rem; bottom: .65rem; color: var(--forest); background: var(--ivory); padding: .25rem .52rem; font-size: .69rem; font-weight: 720; }
 
-.card-grid, .featured-gallery, .gallery-grid { display: grid; gap: clamp(1rem, 2vw, 1.65rem); }
+.card-grid, .gallery-grid { display: grid; gap: clamp(1rem, 2vw, 1.65rem); }
 .service-card { background: #fffcf6; border: 1px solid var(--line); min-width: 0; overflow: hidden; }
 .service-media { position: relative; aspect-ratio: 1.35; background: var(--cream); }
-.service-media img, .approach-image img, .featured-image img, .gallery-photo img { object-fit: cover; }
+.service-media img, .approach-image img, .gallery-photo img { object-fit: cover; }
 .service-media img { object-position: 50% 62%; }
 .service-copy { padding: 1.2rem 1.28rem; }
 .service-copy .eyebrow { color: var(--clay-hover); margin-bottom: .4rem; }
@@ -131,10 +131,6 @@ h3 { font-size: clamp(1.36rem, 2vw, 1.8rem); }
 .approach-image img { object-position: 50% 65%; }
 .approach .section-heading { margin-bottom: 1rem; }
 .approach .text-link, .approach .actions, .split .lede + .button { margin-top: 1rem; }
-.featured-gallery { grid-template-columns: repeat(2, minmax(0,1fr)); }
-.featured-gallery figure:first-child { grid-column: 1 / -1; }
-.featured-image { position: relative; aspect-ratio: 1.13; background: var(--cream); }
-.featured-gallery figure:first-child .featured-image { aspect-ratio: 1.35; }
 figcaption { color: var(--muted); font-size: .875rem; margin-top: .52rem; }
 .concept-slot, .gallery-empty { padding: clamp(1.25rem, 3vw, 2.15rem); background: #fffcf6; border: 1px solid var(--line); }
 .concept-slot p { margin: .65rem 0 .9rem; color: var(--muted); }
@@ -233,9 +229,7 @@ figcaption { color: var(--muted); font-size: .875rem; margin-top: .52rem; }
 
 @media (min-width: 55rem) {
   .split { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .card-grid, .featured-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .featured-gallery figure:first-child { grid-column: auto; }
-  .featured-gallery figure:first-child .featured-image { aspect-ratio: 1.13; }
+  .card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .booking-callout .actions { justify-content: end; }
 }
 
@@ -259,4 +253,57 @@ figcaption { color: var(--muted); font-size: .875rem; margin-top: .52rem; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+
+/* Salon portraits */
+.pet-services { display: grid; gap: 1rem; padding-top: 6.5rem; }
+.pet-service {
+  position: relative; display: flex; align-items: end; min-height: 16rem;
+  padding: 1.55rem; border: 1px solid #c8d2c5; background: var(--sage);
+  color: var(--forest); isolation: isolate;
+}
+.pet-service-cat { background: #eee5d7; border-color: #d9cbbb; }
+.pet-service-portrait { position: absolute; z-index: -1; right: 1rem; bottom: 0; width: 48%; height: calc(100% + 6rem); }
+.pet-service-portrait img { object-fit: contain; object-position: center bottom; transition: transform .25s ease; }
+.pet-service-dog .pet-service-portrait { width: 40%; right: 2rem; }
+.pet-service-copy { display: grid; gap: .5rem; position: relative; max-width: 55%; }
+.pet-service-copy strong { font: 500 clamp(1.9rem, 3.1vw, 3rem)/1.1 var(--display); letter-spacing: -.04em; }
+.pet-service-copy > span:last-child { display: flex; align-items: center; gap: .4rem; font-size: .9rem; font-weight: 730; text-decoration: underline; text-underline-offset: .25em; }
+.pet-service:hover .pet-service-portrait img, .pet-service:focus-visible .pet-service-portrait img { transform: translateY(-6px); }
+.pet-service:focus-visible, .roll-call-link:focus-visible { outline: 3px solid var(--clay-hover); outline-offset: 5px; }
+.roll-call { background: #f1eadc; }
+.roll-call .section-top { margin-bottom: 1.25rem; }
+.roll-call-link { display: block; color: var(--forest); }
+.roll-call-pets { display: grid; grid-template-columns: 1fr .85fr 1.25fr .85fr; align-items: end; gap: clamp(.2rem, 2vw, 2rem); min-height: clamp(12rem, 26vw, 23rem); padding-inline: clamp(.4rem, 4vw, 3rem); border-bottom: 2px solid var(--forest); }
+.roll-call-pets > span { position: relative; display: block; height: clamp(10rem, 24vw, 21rem); }
+.roll-call-pets img { object-fit: contain; object-position: center bottom; transition: transform .25s ease; }
+.roll-call-pets > span:hover img, .roll-call-link:focus-visible img { transform: translateY(-6px); }
+.roll-call-pets .roll-call-cat { height: clamp(8rem, 20vw, 18rem); }
+.roll-call-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: .75rem; font-size: .9rem; font-weight: 700; }
+.reviews-heading { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem 2rem; margin-bottom: 2rem; }
+.reviews-heading > p { color: var(--muted); max-width: 18rem; }
+.review-grid { display: grid; gap: 1rem; }
+.review-card { display: flex; flex-direction: column; min-width: 0; padding: clamp(1.35rem, 2.5vw, 2rem); border: 1px solid #d4d7cb; background: #fffcf6; }
+.review-quote-icon { color: var(--clay-hover); margin-bottom: 1.25rem; }
+.review-card blockquote { flex: 1; color: var(--ink); font-family: var(--display); font-size: clamp(1.05rem, 1.25vw, 1.22rem); line-height: 1.55; }
+.review-card figcaption { display: grid; gap: .1rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.review-author { color: var(--forest); font-weight: 750; }
+.review-card .text-link { width: fit-content; }
+@media (min-width: 40rem) {
+  .pet-services { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+}
+@media (min-width: 55rem) {
+  .pet-services { padding-top: 7rem; }
+  .pet-service { min-height: 19rem; padding: 2rem; }
+  .review-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 39.999rem) {
+  .pet-services { gap: 6.5rem; }
+  .pet-service { min-height: 13rem; }
+  .roll-call-pets { gap: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pet-service-portrait img, .roll-call-pets img { transition: none; }
+  .pet-service:hover .pet-service-portrait img, .pet-service:focus-visible .pet-service-portrait img,
+  .roll-call-pets > span:hover img, .roll-call-link:focus-visible img { transform: none; }
 }

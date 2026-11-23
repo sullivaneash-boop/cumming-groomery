@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, CalendarDays, ChevronDown, Clock3, Heart, MapPin, Phone, Scissors } from "lucide-react";
+import { ArrowUpRight, CalendarDays, ChevronDown, Clock3, Heart, MapPin, Phone, Quote, Scissors } from "lucide-react";
 import { business, businessLinks } from "@/content/business";
 import { faq } from "@/content/faq";
 import { reviews, staff } from "@/content/people";
@@ -177,14 +177,18 @@ export function PeopleSection() {
 export function ReviewsSection() {
   return (
     <section className="section review-section" aria-labelledby="reviews-title">
-      <div className="shell split">
-        <SectionHeading id="reviews-title" label="From pet parents">Customer stories.</SectionHeading>
+      <div className="shell">
+        <div className="reviews-heading">
+          <SectionHeading id="reviews-title" label="From pet parents">Kind words from<br />our community.</SectionHeading>
+          <p>Real stories shared by pet parents on Google.</p>
+        </div>
         {reviews.length ? (
-          <div className="staff-list">
+          <div className="review-grid">
             {reviews.map(({ author, quote, sourceUrl }) => (
-              <figure key={sourceUrl}>
+              <figure className="review-card" key={sourceUrl}>
+                <Quote className="review-quote-icon" size={26} aria-hidden="true" />
                 <blockquote cite={sourceUrl}>{quote}</blockquote>
-                <figcaption><a className="text-link" href={sourceUrl}>{author} · Google Maps profile</a></figcaption>
+                <figcaption><span className="review-author">{author}</span><a className="text-link" href={sourceUrl} aria-label={`View ${author}’s Google Maps profile`}>Google Maps profile <ArrowUpRight size={15} aria-hidden="true" /></a></figcaption>
               </figure>
             ))}
           </div>

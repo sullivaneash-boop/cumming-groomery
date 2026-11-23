@@ -2,14 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { BookingLink, CallLink } from "@/components/links";
-import { AppointmentSteps, FaqSection, PeopleSection, ReviewsSection, SectionHeading, ServiceCard, VisitDetails } from "@/components/sections";
-import { gallery } from "@/content/gallery";
-import { services } from "@/content/services";
+import { AppointmentSteps, FaqSection, PeopleSection, ReviewsSection, SectionHeading, VisitDetails } from "@/components/sections";
 import { site } from "@/content/site";
 
 export default function HomePage() {
-  const featuredPhotos = gallery.slice(0, 3);
-
   return (
     <>
       <section className="hero" aria-labelledby="home-title">
@@ -34,8 +30,16 @@ export default function HomePage() {
             <SectionHeading id="services-title" label="Grooming services">A little care goes a long way.</SectionHeading>
             <Link prefetch={false} className="text-link" href="/services">View all services <ArrowUpRight size={16} aria-hidden="true" /></Link>
           </div>
-          <div className="card-grid">
-            {services.slice(0, 3).map((service) => <ServiceCard key={service.id} service={service} />)}
+
+          <div className="pet-services">
+            <Link prefetch={false} className="pet-service pet-service-dog" href="/services#dogs-title">
+              <span className="pet-service-portrait"><Image src="/images/cutouts/dog-cutout1.webp" alt="" fill sizes="(min-width: 55rem) 270px, 40vw" /></span>
+              <span className="pet-service-copy"><span className="eyebrow">Grooming for dogs</span><strong>For the dogs.</strong><span>Explore dog grooming <ArrowUpRight size={16} aria-hidden="true" /></span></span>
+            </Link>
+            <Link prefetch={false} className="pet-service pet-service-cat" href="/services#cats-title">
+              <span className="pet-service-portrait"><Image src="/images/cutouts/cat-cutout1.webp" alt="" fill sizes="(min-width: 55rem) 320px, 45vw" /></span>
+              <span className="pet-service-copy"><span className="eyebrow">Grooming for cats</span><strong>For the cats.</strong><span>Explore cat grooming <ArrowUpRight size={16} aria-hidden="true" /></span></span>
+            </Link>
           </div>
         </div>
       </section>
@@ -54,22 +58,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="gallery-title">
+
+      <section className="section roll-call" aria-labelledby="gallery-title">
         <div className="shell">
           <div className="section-top">
-            <SectionHeading id="gallery-title" label="Gallery preview" description="Pets and portraits from The Cumming Groomery.">A few familiar faces.</SectionHeading>
-            <Link prefetch={false} className="text-link" href="/gallery">Open gallery <ArrowUpRight size={16} aria-hidden="true" /></Link>
+            <SectionHeading id="gallery-title" label="From the groomery" description="A few of the dogs and cats who have stopped by.">Look who stopped by.</SectionHeading>
+            <Link prefetch={false} className="text-link" href="/gallery">Explore the gallery <ArrowUpRight size={16} aria-hidden="true" /></Link>
           </div>
-          <div className="featured-gallery">
-            {featuredPhotos.map((photo) => (
-              <figure key={photo.id}>
-                <div className="featured-image">
-                  <Image src={photo.src} alt={photo.alt} fill sizes="(min-width: 55rem) 34vw, 50vw" style={{ objectPosition: photo.position }} />
-                </div>
-                <figcaption>{photo.caption}</figcaption>
-              </figure>
-            ))}
-          </div>
+          <Link prefetch={false} className="roll-call-link" href="/gallery" aria-label="Explore the gallery of salon photos">
+            <span className="roll-call-pets" aria-hidden="true">
+              <span><Image src="/images/cutouts/dogcutout3.webp" alt="" fill sizes="(min-width: 55rem) 220px, 23vw" /></span>
+              <span><Image src="/images/cutouts/dogcutout2.webp" alt="" fill sizes="(min-width: 55rem) 190px, 20vw" /></span>
+              <span className="roll-call-cat"><Image src="/images/cutouts/cat-cutout1.webp" alt="" fill sizes="(min-width: 55rem) 270px, 25vw" /></span>
+              <span><Image src="/images/cutouts/dog-cutout1.webp" alt="" fill sizes="(min-width: 55rem) 190px, 20vw" /></span>
+            </span>
+            <span className="roll-call-bottom">More moments from the salon <ArrowUpRight size={16} aria-hidden="true" /></span>
+          </Link>
         </div>
       </section>
 
