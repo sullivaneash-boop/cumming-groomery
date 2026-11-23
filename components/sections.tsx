@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowUpRight, CalendarDays, ChevronDown, Clock3, Heart, MapPin, Phone, Quote, Scissors } from "lucide-react";
 import { business, businessLinks } from "@/content/business";
 import { faq } from "@/content/faq";
-import { reviews, staff } from "@/content/people";
+import { owner, reviews, staff } from "@/content/people";
 import { services } from "@/content/services";
 import { site } from "@/content/site";
 import { BookingLink, CallLink, DirectionsLink } from "./links";
@@ -153,20 +153,49 @@ export function BookingCallout() {
   );
 }
 
-export function PeopleSection() {
+export function PeopleSection({ detailed = false }: { detailed?: boolean }) {
   return (
-    <section className="section" aria-labelledby="people-title">
-      <div className="shell split">
-        <SectionHeading id="people-title" label="The people behind the groom">Meet the salon.</SectionHeading>
-        {staff.length ? (
-          <div className="staff-list">
-            {staff.map(({ name, role, bio }) => <article key={name}><h3>{name}</h3><p className="eyebrow">{role}</p><p>{bio}</p></article>)}
+    <section className="section people-section" aria-labelledby="people-title">
+      <div className="shell">
+        <div className="people-intro">
+          <SectionHeading id="people-title" label="The people behind the groom">Meet the people<br />behind the care.</SectionHeading>
+        </div>
+        <div className="owner-feature">
+          <div className="owner-photo">
+            <Image src={owner.image} alt={owner.imageAlt} fill sizes="(min-width: 55rem) 40vw, 92vw" />
           </div>
-        ) : (
-          <div className="concept-slot">
-            <h3>Team profile preview</h3>
-            <p>There’s room here for an approved introduction and team photos. For questions about your pet’s visit, call the salon directly.</p>
-            <CallLink />
+          <div className="owner-copy">
+            <p className="eyebrow">{owner.role}</p>
+            <h3>Meet {owner.name}.</h3>
+            <p>{owner.introduction}</p>
+            {detailed ? (
+              <>
+                <p className="eyebrow owner-story-label">Shelby’s story</p>
+                <p>{owner.story[0]}</p>
+                <div className="actions"><BookingLink /><CallLink /></div>
+              </>
+            ) : (
+              <Link prefetch={false} className="text-link" href="/about#people-title">Get to know Shelby <ArrowUpRight size={16} aria-hidden="true" /></Link>
+            )}
+          </div>
+        </div>
+        {detailed && (
+          <div className="team-stories">
+            <div className="owner-life">
+              <div className="owner-life-photo"><Image src={owner.personalImage} alt={owner.personalImageAlt} fill sizes="(min-width: 55rem) 26vw, 92vw" /></div>
+              <div>
+                <p className="eyebrow">Life beyond the salon</p>
+                <h3>Family, dogs &amp; hockey.</h3>
+                <p className="eyebrow owner-story-label">Shelby’s story</p>
+                <p>{owner.story[1]}</p>
+              </div>
+            </div>
+            {staff.map((person) => (
+              <article className="team-member" key={person.name}>
+                <div className="team-member-photo"><Image src={person.image} alt={person.imageAlt} fill sizes="(min-width: 55rem) 22vw, 92vw" /></div>
+                <div><p className="eyebrow">{person.role}</p><h3>Meet {person.name}.</h3></div>
+              </article>
+            ))}
           </div>
         )}
       </div>

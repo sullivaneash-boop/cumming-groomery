@@ -9,7 +9,7 @@
 | Gallery | Eight supplied salon photos, category filters and keyboard-friendly lightbox | Confirm public use and final selection |
 | Announcements and new-client information | Optional settings | Provide approved copy |
 | Digital gift cards | Optional outbound setting | Supply owner-approved provider link |
-| Staff | Editable profile slots | Supply approved names, biographies and portraits |
+| Staff | User-supplied owner introduction and portraits for Shelby and Madison | Confirm biographies and photo permissions for launch |
 | Reviews | Three user-supplied quotes with Google Maps contributor links | Confirm permission for production use |
 | Email form | Possible future integration | Choose delivery and privacy requirements |
 | CMS | Possible future integration | Decide who edits and how often |

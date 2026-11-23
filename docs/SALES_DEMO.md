@@ -10,7 +10,7 @@ The menu, gallery filters, image viewer, frequently asked questions and contact 
 
 ## Explain the example content
 
-The demo uses supplied photos from the salon's Facebook materials. Full grooming, bath and brush, nail care and add-ons illustrate how an approved menu might read. Customer Stories displays three supplied Google Maps reviews, and the staff section has space for an approved introduction. The Peakline Media concept label identifies the independent demonstration.
+The demo uses supplied photos from the salon's Facebook materials. Full grooming, bath and brush, nail care and add-ons illustrate how an approved menu might read. Customer Stories displays three supplied Google Maps reviews, and the staff section introduces Shelby and Madison using the supplied photos. The Peakline Media concept label identifies the independent demonstration.
 
 ## Ask for the launch details
 

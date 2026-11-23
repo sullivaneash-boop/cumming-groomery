@@ -28,7 +28,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <PeopleSection />
+      <PeopleSection detailed />
       <BookingCallout />
     </>
   );

@@ -307,3 +307,34 @@ figcaption { color: var(--muted); font-size: .875rem; margin-top: .52rem; }
   .pet-service:hover .pet-service-portrait img, .pet-service:focus-visible .pet-service-portrait img,
   .roll-call-pets > span:hover img, .roll-call-link:focus-visible img { transform: none; }
 }
+
+/* Owner and team */
+.people-section { background: var(--ivory); }
+.people-intro { margin-bottom: 2rem; }
+.owner-feature { display: grid; background: var(--sage); }
+.owner-photo { position: relative; height: clamp(18rem, 85vw, 26rem); background: var(--cream); }
+.owner-photo img, .owner-life-photo img, .team-member-photo img { object-fit: cover; object-position: center; }
+.owner-copy { align-self: center; padding: clamp(1.5rem, 4vw, 3.5rem); }
+.owner-copy h3 { font-size: clamp(2.1rem, 3.8vw, 3.5rem); margin-top: .5rem; }
+.owner-copy p:not(.eyebrow) { color: var(--muted); margin-top: 1rem; max-width: 37rem; font-size: 1.06rem; }
+.owner-copy .text-link, .owner-copy .actions { margin-top: 1.2rem; }
+.team-stories { display: grid; gap: 1.25rem; margin-top: 1.25rem; }
+.owner-life, .team-member { display: grid; gap: 1.25rem; background: var(--cream); }
+.owner-life > div:last-child, .team-member > div:last-child { padding: 0 1.4rem 1.5rem; }
+.owner-life-photo, .team-member-photo { position: relative; aspect-ratio: 1.2; background: var(--sage); }
+.owner-life h3, .team-member h3 { margin-top: .45rem; font-size: clamp(1.7rem, 2.4vw, 2.3rem); }
+.owner-life p:not(.eyebrow) { margin-top: .8rem; color: var(--muted); }
+@media (min-width: 55rem) {
+  .owner-feature { grid-template-columns: 1fr 1fr; }
+  .owner-photo { height: 100%; min-height: 30rem; aspect-ratio: auto; }
+  .team-stories { grid-template-columns: 1.45fr 1fr; }
+  .owner-life { grid-template-columns: 1fr 1.15fr; gap: 0; }
+  .owner-life-photo { min-height: 21rem; aspect-ratio: auto; }
+  .owner-life > div:last-child { align-self: center; padding: 1.5rem; }
+  .team-member { grid-template-columns: 1fr 1fr; gap: 0; }
+  .team-member-photo { min-height: 21rem; aspect-ratio: auto; }
+  .team-member > div:last-child { align-self: center; padding: 1.5rem; }
+}
+.owner-feature, .owner-feature > *, .team-stories > *, .owner-life > *, .team-member > * { min-width: 0; }
+.owner-copy .owner-story-label, .owner-life .owner-story-label { margin-top: 1.25rem; }
+.owner-copy .owner-story-label + p, .owner-life .owner-story-label + p { margin-top: .45rem; }
