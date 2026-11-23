@@ -81,9 +81,9 @@ h3 { font-size: clamp(1.36rem, 2vw, 1.8rem); }
 
 .skip-link { position: fixed; inset: .5rem auto auto 1rem; z-index: 15; background: var(--ivory); color: var(--forest); padding: .6rem 1rem; transform: translateY(-150%); }
 .skip-link:focus { transform: translateY(0); }
-.concept-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .16rem .8rem; background: var(--sage); min-height: 2.15rem; padding: .35rem .65rem; text-align: center; color: var(--forest); font-size: .74rem; line-height: 1.45; }
+.concept-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .16rem .8rem; background: #ff8d40; min-height: 2.15rem; padding: .35rem .65rem; text-align: center; color: #1a1a1a; font-size: .74rem; line-height: 1.45; }
 .concept-bar a { display: inline-flex; min-height: 24px; align-items: center; text-underline-offset: .2em; font-weight: 740; text-decoration: underline; }
-.concept-detail { border-left: 1px solid #879386; padding-left: .8rem; }
+.concept-detail { border-left: 1px solid #70431f; padding-left: .8rem; }
 .announcement { padding: .55rem 1rem; background: var(--cream); text-align: center; }
 .header-inner { position: relative; min-height: 4.75rem; display: flex; align-items: center; justify-content: space-between; gap: .9rem; }
 .brand { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; flex: none; color: var(--forest); }
