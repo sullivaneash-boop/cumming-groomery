@@ -188,7 +188,7 @@ export function ReviewsSection() {
               <figure className="review-card" key={sourceUrl}>
                 <Quote className="review-quote-icon" size={26} aria-hidden="true" />
                 <blockquote cite={sourceUrl}>{quote}</blockquote>
-                <figcaption><span className="review-author">{author}</span><a className="text-link" href={sourceUrl} aria-label={`View ${author}’s Google Maps profile`}>Google Maps profile <ArrowUpRight size={15} aria-hidden="true" /></a></figcaption>
+                <figcaption><span className="review-author">{author}</span><a className="text-link" href={sourceUrl} aria-label={`Google Maps profile for ${author}`}>Google Maps profile <ArrowUpRight size={15} aria-hidden="true" /></a></figcaption>
               </figure>
             ))}
           </div>

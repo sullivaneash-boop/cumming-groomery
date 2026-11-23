@@ -65,7 +65,7 @@ export default function HomePage() {
             <SectionHeading id="gallery-title" label="From the groomery" description="A few of the dogs and cats who have stopped by.">Look who stopped by.</SectionHeading>
             <Link prefetch={false} className="text-link" href="/gallery">Explore the gallery <ArrowUpRight size={16} aria-hidden="true" /></Link>
           </div>
-          <Link prefetch={false} className="roll-call-link" href="/gallery" aria-label="Explore the gallery of salon photos">
+          <Link prefetch={false} className="roll-call-link" href="/gallery">
             <span className="roll-call-pets" aria-hidden="true">
               <span><Image src="/images/cutouts/dogcutout3.webp" alt="" fill sizes="(min-width: 55rem) 220px, 23vw" /></span>
               <span><Image src="/images/cutouts/dogcutout2.webp" alt="" fill sizes="(min-width: 55rem) 190px, 20vw" /></span>
